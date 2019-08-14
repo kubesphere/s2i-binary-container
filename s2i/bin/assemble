@@ -1,0 +1,16 @@
+#!/bin/sh -x
+
+
+BINARY_NAME="$(ls /tmp/src/ 2>/dev/null)"
+
+if [ ! -n "$BINARY_NAME" ]; then
+  echo "do not find binary file"
+  exit 1
+fi
+
+echo "found binary file \"$BINARY_NAME\""
+
+echo "mv binary file \"$BINARY_NAME\" to /deployments/ & rename to \"binary\" "
+
+mv -f /tmp/src/$BINARY_NAME /opt/app-root/src/bin/binary
+

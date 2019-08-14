@@ -1,0 +1,7 @@
+#!/bin/sh -x
+
+chmod +x /deployments/binary
+
+echo "run binary with ARGS $ARG"
+
+exec /opt/app-root/src/bin/binary $ARGS
