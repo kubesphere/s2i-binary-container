@@ -24,6 +24,6 @@ RUN useradd -u 1001 -r -g 0 -d ${HOME} -s /sbin/nologin \
       -c "Default Application User" default && \
   chown -R 1001:0 ${APP_ROOT}
 
-COPY ./s2i/bin /usr/libexec/s2i
+COPY bin /usr/libexec/s2i
 
 USER 1001

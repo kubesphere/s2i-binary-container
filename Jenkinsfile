@@ -8,7 +8,7 @@ pipeline {
     stage('build and tag image') {
       steps {
         container('base') {
-          sh '''cd .. &&
+          sh '''
           wget -O s2i.tar.gz https://github.com/openshift/source-to-image/releases/download/v1.1.13/source-to-image-v1.1.13-b54d75d3-linux-amd64.tar.gz \
           && tar -xvf s2i.tar.gz \
           && cp ./s2i /usr/local/bin'''
