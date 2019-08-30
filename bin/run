@@ -1,6 +1,6 @@
 #!/bin/sh -x
 
-chmod +x /deployments/binary
+chmod +x /opt/app-root/src/bin/binary
 
 echo "run binary with ARGS $ARG"
 
