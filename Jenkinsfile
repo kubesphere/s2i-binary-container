@@ -24,7 +24,7 @@ pipeline {
           steps {
             container('base') {
                 sh 'docker tag s2i-binary kubespheredev/s2i-binary'
-                sh 'docker tag s2i-binary kubespheredev/s2i-binary:2.1'
+                sh 'docker tag s2i-binary kubespheredev/s2i-binary:2.1.0'
             }
           }
      }
